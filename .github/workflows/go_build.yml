@@ -1,0 +1,19 @@
+on: push
+name: infoFly build
+jobs:
+  checks:
+    name: run
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Go Modules
+      uses: cedrickring/golang-action@1.6.0
+      env:
+        GO111MODULE: "on"
+
+    - name: build Bot
+      run: |
+        cd bot
+        go build bot.go
+
