@@ -15,5 +15,6 @@ jobs:
     - name: build Bot
       run: |
         cd bot
-        go build bot.go
+        pwd
+        go build main.go
 
