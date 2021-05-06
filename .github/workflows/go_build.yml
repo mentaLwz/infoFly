@@ -12,6 +12,11 @@ jobs:
       env:
         GO111MODULE: "on"
 
+    - name: build InfoFly
+      run: |
+        pwd
+        make
+
     - name: build Bot
       run: |
         cd bot
